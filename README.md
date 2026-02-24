@@ -1,59 +1,166 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Ecommerce Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A beginner-level Ecommerce web application built using Laravel (PHP) for learning and portfolio purposes.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Project Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project is a simple ecommerce website where users can register, login, browse products, add items to cart, and place orders.  
+The application includes user and admin roles, order management, and online payment integration.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project is created mainly for:
+- Learning Laravel
+- Practicing real-world ecommerce flow
+- Showcasing skills on GitHub portfolio
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## User Roles
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Default User
+- Every new registered user is a normal user by default
+- Users cannot become admin automatically
+- Admin role is assigned manually by the developer via database
 
-## Laravel Sponsors
+### Admin
+- Admin is controlled from database
+- Admin has access to dashboard and management features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Frontend Structure
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Home Page
+- Static Header:
+  - Home
+  - Shop
+  - Buy
+  - Contact Us
+- Dynamic Buttons:
+  - Login
+  - Register
+  - Dashboard
+  - Cart
+  - Search
 
-## Contributing
+### Slider
+- Static image slider on home page
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Products Section
+- Latest products shown on home page
+- View All Products option
+- Single product detail page
+- Back to products option
 
-## Code of Conduct
+### Contact Section
+- Static contact form
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Footer
+- Static footer
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Authentication Flow
+
+- User can login or register from header
+- If a guest user clicks "Add to Cart":
+  - Redirected to Login / Register page
+- After login:
+  - User can add products to cart
+  - Place orders
+
+---
+
+## Cart & Order Features (User Side)
+
+- Add products to cart
+- Update or remove cart items
+- View total price
+- Place order using:
+  - Cash on Delivery
+  - Online Payment (Stripe)
+- User can:
+  - Update order
+  - Cancel order
+  - Withdraw order before delivery
+
+---
+
+## User Dashboard
+
+From dashboard, user can:
+- View added products
+- View My Orders
+- Download invoice (PDF)
+- View order details
+- Navigate back to products
+- Logout
+
+---
+
+## Admin Dashboard
+
+Admin can manage the following:
+
+### Category Management
+- Add category
+- View categories
+- Update category
+- Delete category
+
+### Product Management
+- Add products with images and description
+- View products
+- Update products
+- Delete products
+
+### Order Management
+- View all orders
+- Change order status:
+  - Pending
+  - Delivered
+  - Cancelled
+- View invoices
+- Cancel or withdraw orders
+
+---
+
+## Payment Methods
+
+- Cash on Delivery
+- Stripe Payment Gateway (online payment)
+
+---
+
+## Technologies Used
+
+- PHP (Laravel Framework)
+- Blade Templates
+- MySQL Database
+- Bootstrap (basic usage)
+- Stripe Payment Integration
+- PDF Invoice Generation
+
+---
+
+## Project Purpose
+
+- Learn Laravel fundamentals
+- Practice CRUD operations
+- Understand authentication and authorization
+- Build a portfolio-ready project
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-source and available under the MIT License.
+
+---
+
+## Author
+
+Your Name  
+Beginner Laravel Developer  
+GitHub: https://github.com/Mughal1029/laravel-ecommerce
