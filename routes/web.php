@@ -50,6 +50,7 @@ Route::middleware('admin')->group(function () {
     
     
     });
+
     Route::get('/downloadpdf/{id}', [AdminController::class, 'downloadPdf']); 
 
 require __DIR__.'/auth.php';
